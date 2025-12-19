@@ -1,0 +1,299 @@
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --bg-input: #2d2d2d;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --border: #333333;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.16);
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card {
+    margin: auto;
+    margin-top: 3rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    color: var(--text-main);
+}
+
+.card.p-4.shadow, .card.text-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, textarea, select, .form-control, .form-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-input) !important;
+    color: #fff !important;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box; /* Fix width issues */
+}
+
+input:focus, textarea:focus, select:focus, .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.btn, button {
+    color: #e1e1e1;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary, button[name="save"], button[name="create"], button[name="update"], button[name="login"] {
+    background-color: var(--primary);
+    color: white;
+}
+.btn-primary:hover, button:hover {
+    background-color: var(--primary-hover);
+    filter: brightness(1.1);
+}
+
+.btn-success {
+    /*color: var(--success);*/
+    padding: 10px 20px;
+}
+
+.btn-danger {
+    color: var(--danger);
+    padding: 10px 20px;
+}
+
+.btn-rm {
+    color: var(--danger);
+    padding: 10px 20px;
+}
+
+.btn-sm{
+    padding: 10px 20px;
+}
+
+.btn-warning{
+    /*color: var(--warning);*/
+    padding: 10px 20px;
+}
+
+.btn-edit {
+    color: var(--warning);
+    padding: 10px 20px;
+}
+
+.btn-secondary, button[type="button"] {
+    background-color: #4b5563;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #374151;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow);
+}
+.back-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+table, .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    color: var(--text-main);
+    --bs-table-bg: transparent; /* Bootstrap override */
+    --bs-table-color: var(--text-main);
+}
+
+th {
+    background-color: #262626;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.album-card, .song-card {
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-card:hover, .song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    border-color: var(--primary);
+}
+
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--success);
+    margin: 10px 0;
+}
+
+.lyrics-box {
+    max-height: 100px;
+    overflow-y: auto;
+    background: #111;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #ccc;
+    white-space: pre-wrap;
+}
+
+.role-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.role-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+#floating-cart {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+#floating-cart .btn {
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background: var(--warning);
+    color: black;
+    font-weight: 800;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid var(--border);
+}
+.nav-tabs .nav-link {
+    color: var(--text-muted);
+    border: none;
+    background: transparent;
+}
+.nav-tabs .nav-link:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+}
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-bottom-color: var(--bg-card);
+}
+
+.album-card, .song-card {
+    background: #141414;
+    border: 1px solid #1f1f1f;
+    border-radius: 12px;
+    padding: 15px;
+    height: 100%;
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.album-card h5, .song-card h5 {
+    color: #ffffff;
+}
+
+.text-muted {
+    color: #a0a0a0 !important;
+}
